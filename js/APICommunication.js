@@ -1,5 +1,5 @@
-/*global window */
-/*global alert */
+///*global window */
+///*global alert */
 /*jslint browser: true, for:true */
 
 //JavaScript Document
@@ -12,11 +12,11 @@
 
 //1. Definición de Objetos y Variables
 var zonaDatos;
-var botonLeer;
+var botonLeerFichero;
 
 //1.1 Extracción de elementos desde HTML
 zonaDatos = document.getElementById("zona-datos");
-botonLeer = document.getElementById("boton-leer");
+botonLeerFichero = document.getElementById("boton-leer-fichero");
 
 
 //2. Definición de Funciones
@@ -39,7 +39,7 @@ function leer() {
     var url;
     var solicitud;
 // Si el fichero está alojado en la misma ubicación que el documento HTML, no es necesario especificar la ruta.
-    url = "../texto.txt";
+    url = "texto.txt";
 
 // Creamos un objeto "solicitud" con el constructor "new" de XMLHttpRequest();
     solicitud = new XMLHttpRequest();
@@ -51,14 +51,14 @@ function leer() {
     solicitud.open("GET", url, true);
 
 //Especificamos la información que vamos a enviar que en este caso es ninguna (null)
-    solicitu.send(null);
+    solicitud.send(null);
 }
 
 
 function comenzar() {
     "use strict";
 
-botonLeer.addEventListener("click", leer, false);
+botonLeerFichero.addEventListener("click", leer, false);
 }
 
 
