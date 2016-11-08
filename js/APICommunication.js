@@ -23,7 +23,7 @@ botonLeerFichero = document.getElementById("boton-leer-fichero");
 
 
 
-function mostrar(e) {
+function mostrarContenido(e) {
     "use strict";
 
 //Publicamos en zonaDatos el contenido del evento generado
@@ -33,7 +33,7 @@ function mostrar(e) {
     zonaDatos.innerHTML = e.target.responseText;
 }
 
-function leer() {
+function leerFichero() {
     "use strict";
 
     var url;
@@ -45,7 +45,7 @@ function leer() {
     solicitud = new XMLHttpRequest();
 
 //Ponemos el objeto a la escucha
-    solicitud.addEventListener("load", mostrar, false);
+    solicitud.addEventListener("load", mostrarContenido, false);
 
 //Abrimos la conexión con un método GET a la dirección url
     solicitud.open("GET", url, true);
@@ -58,7 +58,7 @@ function leer() {
 function comenzar() {
     "use strict";
 
-botonLeerFichero.addEventListener("click", leer, false);
+    botonLeerFichero.addEventListener("click", leerFichero, false);
 }
 
 
