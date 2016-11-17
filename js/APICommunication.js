@@ -39,7 +39,7 @@ function leerFichero() {
     var url;
     var solicitud;
 // Si el fichero está alojado en la misma ubicación que el documento HTML, no es necesario especificar la ruta.
-    url = "texto.txt";
+    url = "js/texto.txt";
 
 // Creamos un objeto "solicitud" con el constructor "new" de XMLHttpRequest();
     solicitud = new XMLHttpRequest();
